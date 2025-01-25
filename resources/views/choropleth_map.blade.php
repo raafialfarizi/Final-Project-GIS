@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choropleth Map</title>
+    <title>Jumlah Penduduk</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
@@ -55,7 +55,7 @@
 
         var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | <ahref="https://sumsel.bps.go.id/id/publication/2024/09/26/25fc4b6a2ccdd4d4f9156322/regional-statistics-of-sumatera-selatan-province-2024.html">BPSP sumsel</a>'
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
         const sumsels = @json($sumsels)
@@ -85,9 +85,9 @@
                 d > 750000  ? '#BD0026' :
                 d > 600000  ? '#E31A1C' :
                 d > 500000  ? '#FC4E2A' :
-                d > 400000   ? '#FD8D3C' :
-                d > 300000   ? '#FEB24C' :
-                d > 200000   ? '#FED976' :
+                d > 400000  ? '#FD8D3C' :
+                d > 300000  ? '#FEB24C' :
+                d > 200000  ? '#FED976' :
                             '#FFEDA0';
         }
 
